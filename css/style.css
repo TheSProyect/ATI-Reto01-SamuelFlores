@@ -161,6 +161,21 @@ section {
     width: 160px;
     height: 200px;
 }
+.personContainer:hover {
+    background-color: #99c5dd !important; 
+    transform: scale(1.05) rotate(2deg); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.personContainer:hover img {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.personContainer:hover .person-name {
+    transform: rotate(-1deg); 
+    transition: transform 0.3s ease-in-out;
+}
 .person-name{
     margin-top: 10px;
     font-weight: bold;
