@@ -1,6 +1,3 @@
-let params = new URLSearchParams(window.location.search);
-let lang = (params.get("lang") || "ES").toUpperCase(); 
-
 window.onload = function() {
     const index = document.querySelector('.person-index');
 
@@ -18,7 +15,7 @@ window.onload = function() {
 			namediv.textContent = perfil.nombre;
 
             const link = document.createElement("a");
-            link.href = `perfil.html?ci=${perfil.ci}&lang=${lang}`;
+            link.href = `perfil.html?ci=${perfil.ci}&lang=es`;
 
             const img = document.createElement('img');
             img.setAttribute('srcset', `${perfil.imagen}`);
@@ -38,7 +35,27 @@ window.onload = function() {
 
     mostrarPerfiles(perfiles);
 	
-    
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const notFound = document.getElementById('notFound'); 
+	
+	searchButton.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const search = searchInput.value.toLowerCase(); 
+        const filtro = perfiles.filter(perfil => perfil.nombre.toLowerCase().includes(search));
+
+        if (filtro.length > 0) {
+            mostrarPerfiles(filtro); 
+            notFound.textContent = ''; 
+        } else {
+            mostrarPerfiles([]); 
+			notFound.textContent = config.sinResultados + search; 
+        }
+    });
+	
+	let params = new URLSearchParams(window.location.search);
+	let lang = (params.get("lang") || "ES").toUpperCase(); 
+	
 	let configScript = document.createElement("script");
 	configScript.src = `conf/config${lang}.json`;
 	

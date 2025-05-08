@@ -315,3 +315,8 @@ footer {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+.notFoundMessage{
+	text-align: center;
+    font-size: 2rem;
+	color: #3498db;
+}
