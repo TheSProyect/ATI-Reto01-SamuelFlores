@@ -1,23 +1,26 @@
+let params = new URLSearchParams(window.location.search);
+let lang = (params.get("lang") || "ES").toUpperCase(); 
+
 window.onload = function() {
-	let index = document.querySelector('.person-index');
+    const index = document.querySelector('.person-index');
 
     function mostrarPerfiles(perfiles) {
         index.innerHTML = ''; 
         perfiles.forEach((perfil) => {
-            let li = document.createElement('li');
+            const li = document.createElement('li');
             li.classList.add('person');
 			
-			let persondiv = document.createElement('div');
+			const persondiv = document.createElement('div');
             persondiv.classList.add('personContainer');
 			
-			let namediv = document.createElement('div');
+			const namediv = document.createElement('div');
             namediv.classList.add('person-name');
 			namediv.textContent = perfil.nombre;
 
-            let link = document.createElement("a");
-            link.href = `perfil.html?ci=${perfil.ci}&lang=es`;
+            const link = document.createElement("a");
+            link.href = `perfil.html?ci=${perfil.ci}&lang=${lang}`;
 
-            let img = document.createElement('img');
+            const img = document.createElement('img');
             img.setAttribute('srcset', `${perfil.imagen}`);
             img.setAttribute('alt', `Imagen de ${perfil.nombre}`);
 
@@ -35,14 +38,9 @@ window.onload = function() {
 
     mostrarPerfiles(perfiles);
 	
-    let searchInput = document.getElementById('searchInput');
-    let searchButton = document.getElementById('searchButton');
-    let notFound = document.getElementById('notFound'); 
-	
-	
-	
+    
 	let configScript = document.createElement("script");
-	configScript.src = `conf/configES.json`;
+	configScript.src = `conf/config${lang}.json`;
 	
 	configScript.onload = function () {
 		
