@@ -1,0 +1,13 @@
+const perfil = {
+	"nombre":"Samuel Flores",
+	"descripcion":"En el vacío hubo caos, en el caos hubo libertad. De la luz nacieron las sombras que emanan a la tierra. Y cantaba el soñador: Oh, luna de ambiciòn, Oh, luna de melancolía. Por ti soy fuego de pasión, por ti soy mar de melodía - Cenizas en el agua",
+	"color": "Azul",
+	"libro": ["Juegos de Engaño"],
+	"musica": ["Rock Uruguayo"],
+	"video_juego":["Hollow Knight, Solitario Spider"],
+	"lenguajes":["C++", "Java", "Python"],
+	"email":"samuelenriquefr@gmail.com",
+	"ci":"30416486",
+	"genero":"masculino",
+	"fecha_nacimiento":"07/08/20003",
+}
