@@ -9,28 +9,33 @@
 		
 		<link rel="stylesheet" href="css/style.css">
 		
+		<script src="datos/index.json" defer></script>
+		<script src="js/index.js" defer></script>
+
+		
 	</head>
 	
 	<body>
+		
 		<header>
 		<nav>
             <ul>
                 <li>
-					<div class="title">
+					<div class="title" id="tituloATI">
 						<p>ATI<span>[UCV]</span> 2024-1</p>
 					</div>
 				</li>
                 
 				<li>
 					<div class="welcome">
-						<p>Hola, Samuel Flores</p>
+						<p id="bienvenida">Hola, </p>
 					</div>
 				</li>
                 
 				<li>
 					<form>
-						<input type="text" placeholder="nombre..." />
-						<button type="submit">Buscar</button>
+						<input type="text" placeholder="nombre..." name="search" id="searchInput" />
+						<button type="submit" id="searchButton">Buscar</button>
 					</form>
 				</li>
             </ul>
@@ -39,118 +44,15 @@
 		
 		<section>
 			<ul class="person-index">
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="30416486/30416486Pequena.jpg">
-							<img src="30416486/30416486Grande.jpg">
-						</picture>
-						<div class="person-name">Samuel Flores</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy1/dummysmall.jpg">
-							<img src="dummy1/dummy.jpg">
-						</picture>
-						<div class="person-name">Emilia Casado</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy2/dummysmall.jpg">
-							<img src="dummy2/dummy.jpg">
-						</picture>
-						<div class="person-name">Maria Elena Pinto</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy3/dummysmall.jpg">
-							<img src="dummy3/dummy.jpg">
-						</picture>
-						<div class="person-name">Mariana Rodriguez</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy4/dummysmall.jpg">
-							<img src="dummy4/dummy.jpg">
-						</picture>
-						<div class="person-name">Enrique Colina</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy6/dummysmall.jpg">
-							<img src="dummy6/dummy.jpg">
-						</picture>
-						<div class="person-name">Juan Antonio Perez</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy5/dummysmall.jpg">
-							<img src="dummy5/dummy.jpg">
-						</picture>
-						<div class="person-name">Ronald Gutierrez</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<img src="dummy1/dummy.jpg">
-						<div class="person-name">Emilia Casado</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy2/dummysmall.jpg">
-							<img src="dummy2/dummy.jpg">
-						</picture>
-						<div class="person-name">Maria Elena Pinto</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy3/dummysmall.jpg">
-							<img src="dummy3/dummy.jpg">
-						</picture>
-						<div class="person-name">Mariana Rodriguez</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy4/dummysmall.jpg">
-							<img src="dummy4/dummy.jpg">
-						</picture>
-						<div class="person-name">Enrique Colina</div>
-					</div>
-				</li>
-				<li class="person">
-					<div class="personContainer">
-						<picture>
-							<source media="(max-width: 768px)" srcset="dummy6/dummysmall.jpg">
-							<img src="dummy6/dummy.jpg">
-						</picture>
-						<div class="person-name">Juan Antonio Perez</div>
-					</div>
-				</li>
-			
+
 			</ul>
+			
+			<p class="notFoundMessage" id="notFound"></p>
 		</section>
 	
-		<footer>
+		<footer id="copyright">
 			Copyright © 2024 Escuela de computación - ATI. Todos los derechos reservados
 		</footer>
-	
+		<script src="js/index.js"></script>
 	</body>
 </html>

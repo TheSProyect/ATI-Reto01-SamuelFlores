@@ -3,42 +3,41 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Samuel Flores</title>
+		<title></title>
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
 		
-		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="css/style.css">
 		
+		<script src="js/perfil.js" defer></script>
 	</head>
 	
 	<body>
 		<div class="mainContainer">
 			<picture>
-				<source media="(max-width: 768px)" srcset="30416486Pequena.jpg">
-				<img src="30416486Grande.jpg" class="photo" alt="Foto de Samuel Flores" title="30416486">
+				<img class="photo" id="foto" title="">
 			</picture>
 			<div class="infoContainer">
 				
-				<h1 class="titlename">Samuel Flores</h1>
+				<h1 class="titlename" id="titulo"></h1>
 				
-				<p class="description">En el vacío hubo caos, en el caos hubo libertad. De la luz nacieron las sombras que emanan a la tierra. Y cantaba el soñador: 
-				"Oh, luna de ambiciòn, Oh, luna de melancolía. Por ti soy fuego de pasión, por ti soy mar de melodía" - Cenizas en el agua</p>
+				<p class="description" id="descripcion"></p>
 				<div class="preferenceContainer">
 					<ul id="list1" class="preferenceList">
-						<li>Mi color favorito es:</li>
-						<li>Mi libro favorito es:</li>
-						<li>Estilo de música preferida es:</li>
-						<li>Mis Video juegos favoritos son:</li>
-						<li><strong>Lenguajes aprendidos:</strong></li>
+						<li id="colorPrompt">Mi color favorito es:</li>
+						<li id="bookPrompt">Mi libro favorito es:</li>
+						<li id="musicPrompt">Estilo de música preferida es:</li>
+						<li id="gamePrompt">Mis Video juegos favoritos son:</li>
+						<li id="langPrompt"><strong>Lenguajes aprendidos:</strong></li>
 					</ul>
 					<ul id="list2" class="preferenceList">
-						<li>Azul</li>
-						<li>"Juegos de Engaño"</li>
-						<li>Rock Uruguayo</li>
-						<li>Hollow Knight, Solitario Spider, Pirate Warriors</li>
-						<li><strong>C++, Java, Python</strong></li>
+						<li id="colorFav"></li>
+						<li id="bookFav"></li>
+						<li id="musicFav"></li>
+						<li id="gameFav"></li>
+						<li id="learnLang"></li>
 					</ul>
 				</div>
-				<p>Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:samuelenriquefr@gmail.com">samuelenriquefr@gmail.com</a></p>
+				<p id="mailPrompt">Si necesitan comunicarse conmigo me pueden escribir a: <a id="mail" href=""></a></p>
 	
 			</div>
 		</div>
