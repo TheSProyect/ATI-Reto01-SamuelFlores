@@ -1,42 +1,64 @@
-body {
-    font-size: 1rem; 
+
+body, .perfil, .index {
     font-family: Arial, sans-serif;
+    font-size: 1rem;
+    margin: 0 auto;
 }
 
-.perfil {
-    font-family: Arial;
-    margin: 20px;
+.index {
+    width: 1100px;
 }
 
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
-.infoContainer {
-    border: solid;
-    border-width: 1px;
-    padding-left: 10px;
-    box-shadow: 4px 8px rgba(0, 0, 0, 0.1); 
+.mainContainer .photo {
+    width: 250px;
+    border-top-left-radius: 50px;
+    flex-shrink: 0;
+}
+
+.mainContainer .infoContainer {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 650px;
-    
+    flex: 1;
+}
+
+.titlename {
+    font-size: 2.125rem;
+    color: orange;
+    margin-bottom: 5px;
 }
 
 .description {
     font-style: italic;
-    font-family: 'serif';
+    font-family: serif;
     margin-top: 3px;
 }
+
 .preferenceContainer {
     display: flex;
+    gap: 20px;
 }
+
 .preferenceList {
-	font-size: 0.95rem;
-    list-style-type: none; 
+    list-style: none;
+    padding: 0;
+    font-size: 0.95rem;
 }
-#list1 {
-padding-left: 0; 
-}
+
 .preferenceList li {
     margin-bottom: 4px;
 }
-a {
+
+a, a:link {
     color: orange;
     text-decoration: none;
 }
@@ -44,69 +66,29 @@ a:visited {
     color: red;
 }
 
-
-.index {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 1100px;
-    margin: 0 auto;
-}
 header {
     background-color: #3597db;
-    width: 100%;
-    height: 30px;
     color: white;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 30px;
+    width: 100%;
 }
 
 nav ul {
-    list-style-type: none;
+    display: flex;
+    list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-
-.title {
-    display: flex;
-    width: 100%;		
-    text-align: left;
-    font-size: 2rem;
-    border-right: 2px solid white;
-    height: 100%;
-    padding-right: 20px;
-}
-.title span {
-    font-size: 1.125rem;
-}
-
-.welcome {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    margin-left: 60px;
-    margin-right: 80px;
-    font-size: 0.875rem;
-    border-right: 2px solid white;
-    height: 100%;
-    padding-right: 20px;
+    gap: 20px;
 }
 
 nav form {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     gap: 10px;
-    align-items: center;
-    text-align: right;
-    width: 100%;
-    height: 100%;
     margin-left: 60px;
     margin-right: 10px;
 }
@@ -115,10 +97,8 @@ nav input[type="text"] {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
     transition: border-color 0.3s, box-shadow 0.3s;
-	font-size: 16px;
-    margin-left: 40px;
-    margin-right: 10px;
 }
 
 nav input[type="text"]:focus {
@@ -134,23 +114,19 @@ nav button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 nav button:focus {
     background-color: black;
     outline: 2px dashed gray;
 }
-section {
-    padding: 20px;
-}
 
 .person-index {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 20px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
 
 .personContainer {
@@ -158,32 +134,31 @@ section {
     border-right: 2px solid #ddd;
     border-bottom: 2px solid #ddd;
     padding: 10px;
-    text-align: center; 
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    will-change: transform;
 }
+
 .personContainer img {
     width: 160px;
     height: 200px;
 }
+
 .personContainer:hover {
-    background-color: #99c5dd !important; 
-    transform: scale(1.05) rotate(2deg); 
-    transition: all 0.3s ease-in-out; 
+    background-color: #99c5dd;
+    transform: scale(1.05) rotate(2deg);
 }
 
-.personContainer:hover img {
-    transform: scale(1.05); 
-    transition: transform 0.3s ease-in-out;
-}
-
+.personContainer:hover img,
 .personContainer:hover .person-name {
-    transform: rotate(-1deg); 
-    transition: transform 0.3s ease-in-out;
+    transform: scale(1.05);
 }
-.person-name{
+
+
+.person-name {
     margin-top: 10px;
     font-weight: bold;
     font-size: 16px;
@@ -191,121 +166,15 @@ section {
 }
 
 footer {
-	font-size: 0.875rem;
+    font-size: 0.875rem;
     background-color: #3597db;
     text-align: center;
     padding: 10px;
     border-top: 2px solid #2980b9;
 }
-.notFoundMessage{
-	text-align: center;
+
+.notFoundMessage {
+    text-align: center;
     font-size: 2rem;
-	color: #3498db;
-}
-
-@media (max-width: 480px) {
-    .mainContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .photo {
-        width: 80%;
-        margin-right: 0;
-        border-radius: 30px;
-    }
-
-    .infoContainer {
-        max-width: 90%;
-        padding: 10px;
-    }
-
-    header, .index {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    nav form {
-        grid-template-columns: 1fr;
-        margin: 10px 0;
-    }
-
-    .person-index {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    .mainContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .photo {
-        width: 200px;
-    }
-
-    .infoContainer {
-        max-width: 90%;
-    }
-
-    header, .index {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    nav form {
-        grid-template-columns: 1fr auto;
-        margin: 10px;
-    }
-
-    .person-index {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .mainContainer {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .photo {
-        width: 220px;
-    }
-
-    .infoContainer {
-        max-width: 600px;
-    }
-
-    header, .index {
-        width: 95%;
-    }
-
-    .person-index {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1025px) {
-    .mainContainer {
-        flex-direction: row;
-    }
-
-    .photo {
-        width: 250px;
-    }
-
-    .infoContainer {
-        max-width: 650px;
-    }
-
-    header, .index {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .person-index {
-        grid-template-columns: repeat(4, 1fr);
-    }
+    color: #3498db;
 }
